@@ -67,7 +67,7 @@ export const NavLinks = (): JSX.Element => {
   return (
     <NavbarLinks>
 
-      <Button type="primary" as="a" href={"/about"}>
+      <Button type="primary" as="a" href="/about">
         Sobre mim
       </Button>
 
