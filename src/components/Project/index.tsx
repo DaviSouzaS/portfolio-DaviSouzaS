@@ -42,8 +42,6 @@ export const Project = (): JSX.Element => {
     fetchData();
   }, []);
 
-  console.log(repositories)
-
   return (
     <>
       {repositories?.map((repository) => (
