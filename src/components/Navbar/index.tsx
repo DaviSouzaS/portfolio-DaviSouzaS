@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useMedia from "use-media";
 import { userData } from "@/utils/userData";
+import "./index.css"
 
 import {
   Navbar as NavbarWrapper,
@@ -44,7 +45,7 @@ export const NavBar = (): JSX.Element => {
               width={"48px"}
               height={"48px"}
             />
-            <LogoTipoText>{userData.nameUser}</LogoTipoText>
+            <LogoTipoText><a className="user-link" href="/">{userData.nameUser}</a></LogoTipoText>
           </LogoTipo>
           {isWide && (
             <Button
@@ -65,7 +66,7 @@ export const NavBar = (): JSX.Element => {
 export const NavLinks = (): JSX.Element => {
   return (
     <NavbarLinks>
-      {userData.whatsappNumber && (
+      {/* {userData.whatsappNumber && (
         <Button
           type="primary"
           as="a"
@@ -74,7 +75,11 @@ export const NavLinks = (): JSX.Element => {
         >
           Falar no whatsapp
         </Button>
-      )}
+      )} */}
+
+      <Button type="primary" as="a" href={"/about"}>
+        Sobre mim
+      </Button>
 
       {userData.githubUser && (
         <Button

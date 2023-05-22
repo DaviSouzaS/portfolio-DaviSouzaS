@@ -6,6 +6,8 @@ import { Button } from "@/styles/Buttons";
 // Components
 import { Stack } from "@/components/Stack";
 import { Project } from "@/components/Project";
+import { NavBar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
 
 // Data
 import { stackData } from "@/utils/stackData";
@@ -27,6 +29,8 @@ import {
 
 export const Home = (): JSX.Element => {
   return (
+  <>
+    <NavBar/>
     <main>
       <Header>
         <Container>
@@ -100,5 +104,7 @@ export const Home = (): JSX.Element => {
         </Container>
       </ProjectsArea>
     </main>
+    <Footer/>
+  </>
   );
 };
