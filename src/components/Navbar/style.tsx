@@ -42,8 +42,15 @@ export const LogoTipoText = styled("span", {
   fontFamily: '"IBM Plex Sans"',
   "@mobile": {
     fontSize: "1rem",
-  }
+  },
+  ":hover": {
+    textDecoration: "underline"
+  },
 });
+
+export const UserName = styled("a", {
+  color: "$brand1"
+})
 
 export const NavbarLinks = styled(Flex, {
   "@mobile": {

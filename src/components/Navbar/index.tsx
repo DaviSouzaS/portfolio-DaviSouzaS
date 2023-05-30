@@ -1,7 +1,6 @@
 import { useState } from "react";
 import useMedia from "use-media";
 import { userData } from "@/utils/userData";
-import "./index.css"
 
 import {
   Navbar as NavbarWrapper,
@@ -10,6 +9,7 @@ import {
   LogoTipoText,
   NavbarLinks,
   NavbarMobileArea,
+  UserName
 } from "./style";
 
 import { FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
@@ -45,7 +45,11 @@ export const NavBar = (): JSX.Element => {
               width={"48px"}
               height={"48px"}
             />
-            <LogoTipoText><a className="user-link" href="/">{userData.nameUser}</a></LogoTipoText>
+            <LogoTipoText>
+                <UserName href="/">
+                  {userData.nameUser}
+                </UserName>
+              </LogoTipoText>
           </LogoTipo>
           {isWide && (
             <Button
